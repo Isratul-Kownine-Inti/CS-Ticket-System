@@ -1,0 +1,137 @@
+[
+  {
+    "id": "#1001",
+    "title": "Login Issue",
+    "description": "User is unable to login with correct credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/15/2024"
+  },
+  {
+    "id": "#1002",
+    "title": "Payment Failed",
+    "description": "Payment is getting declined during checkout.",
+    "customer": "Karim Ahmed",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/16/2024"
+  },
+  {
+    "id": "#1003",
+    "title": "Profile Update Error",
+    "description": "Unable to update profile information.",
+    "customer": "Nusrat Jahan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/16/2024"
+  },
+  {
+    "id": "#1004",
+    "title": "Slow Website Performance",
+    "description": "Website is loading very slowly on mobile devices.",
+    "customer": "Tanvir Hasan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/17/2024"
+  },
+  {
+    "id": "#1005",
+    "title": "Password Reset Not Working",
+    "description": "Reset password link is not being sent to email.",
+    "customer": "Sadia Islam",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/17/2024"
+  },
+  {
+    "id": "#1006",
+    "title": "Order Not Showing",
+    "description": "Recent order is not visible in order history.",
+    "customer": "Imran Hossain",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/18/2024"
+  },
+  {
+    "id": "#1007",
+    "title": "App Crash Issue",
+    "description": "Mobile app crashes after login.",
+    "customer": "Mim Akter",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/18/2024"
+  },
+  {
+    "id": "#1008",
+    "title": "Wrong Product Delivered",
+    "description": "Customer received incorrect product.",
+    "customer": "Fahim Chowdhury",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/19/2024"
+  },
+  {
+    "id": "#1009",
+    "title": "Refund Delay",
+    "description": "Refund has not been processed after 7 days.",
+    "customer": "Jannatul Ferdous",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/19/2024"
+  },
+  {
+    "id": "#1010",
+    "title": "Email Notification Not Received",
+    "description": "User is not receiving system notifications.",
+    "customer": "Shakib Al Hasan",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "1/20/2024"
+  },
+  {
+    "id": "#1011",
+    "title": "Account Suspended Unexpectedly",
+    "description": "Account got suspended without prior notice.",
+    "customer": "Farhana Rahman",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/20/2024"
+  },
+  {
+    "id": "#1012",
+    "title": "Coupon Code Not Working",
+    "description": "Discount coupon shows invalid during checkout.",
+    "customer": "Rashed Kabir",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "1/21/2024"
+  },
+  {
+    "id": "#1013",
+    "title": "Image Upload Failed",
+    "description": "User cannot upload profile picture.",
+    "customer": "Tania Sultana",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/21/2024"
+  },
+  {
+    "id": "#1014",
+    "title": "Address Not Saving",
+    "description": "Shipping address changes are not being saved.",
+    "customer": "Arif Hossain",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "1/22/2024"
+  },
+  {
+    "id": "#1015",
+    "title": "Subscription Cancellation Issue",
+    "description": "User unable to cancel subscription plan.",
+    "customer": "Maliha Khan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "1/22/2024"
+  }
+]
