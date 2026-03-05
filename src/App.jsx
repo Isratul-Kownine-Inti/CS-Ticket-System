@@ -1,9 +1,10 @@
 
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Navbar from './components/Navbar/Navbar'
 import CustomerTickets from './components/CustomerTickets/CustomerTickets';
+  import { ToastContainer, toast } from 'react-toastify';
 
 
 const fetchTickets = async () =>{
@@ -14,14 +15,56 @@ const fetchTickets = async () =>{
 const ticketsPromise = fetchTickets()
 function App() {
 
+  const[ taskList, setTaskList]= useState([]);
+ const [resolvedTicket, setResolvedTicket] = useState([]);
+//  const [ticketList, setTicketList] = useState([])  
+ 
+
+    const handleTaskList = (ticket) =>{
+      
+      const isExist = taskList.find(customerTicket =>customerTicket.id === ticket.id)
+      if(isExist)
+      {
+         toast("The ticket is already added!")
+         return;
+      }
+      const newTaskList = ([...taskList,ticket]);
+      setTaskList(newTaskList)
+      // console.log(newTaskList)
+       toast("Ticket Added!")
+    }
+
+    const handleCompleteButton = (ticket) =>{
+
+      const updatedTaskList = taskList.filter(task => task.id !== ticket.id)
+      setTaskList(updatedTaskList);
+
+     
+        const newResolvedTicket = ([...resolvedTicket,ticket])
+        setResolvedTicket(newResolvedTicket)
+
+        toast("Issue is resolved!")
+
+    }
+
+   
   return (
     <>
       
       <Navbar></Navbar>
+        <Banner taskList={taskList} resolvedTicket={resolvedTicket}></Banner>
       <Suspense>
-        <CustomerTickets ticketsPromise={ticketsPromise}></CustomerTickets>
+        <CustomerTickets 
+        ticketsPromise={ticketsPromise}
+        handleTaskList={handleTaskList}
+        taskList={taskList}
+        resolvedTicket={resolvedTicket}
+        handleCompleteButton={handleCompleteButton}
+        
+
+        ></CustomerTickets>
       </Suspense>
-      {/* <Banner></Banner> */}
+         <ToastContainer />
     
      
     </>

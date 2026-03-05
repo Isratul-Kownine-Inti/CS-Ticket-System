@@ -2,14 +2,20 @@ import React from 'react';
 import { SlCalender } from "react-icons/sl";
 import { FaCircle } from "react-icons/fa";
 
-const SingleTicket = ({ticket}) => {
+const SingleTicket = ({ticket,taskList,handleTaskList}) => {
+
+    const isTaskExist =taskList.some(task=> task.id ===ticket.id) 
     return (
-        <div className="card card-border bg-base-100  shadow-2xl">
+        <div onClick={()=>handleTaskList(ticket)} className="card card-border bg-base-100  shadow-2xl">
                     <div className="card-body space-y-5">
                         <div className='flex justify-between items-center'>
                             <h2 className="card-title font-bold">{ticket.title}</h2>
-                            <span className="badge bg-green-400 text-green-700 font-medium"><span className='text-green-900'><FaCircle />
-                            </span>{ticket.status}</span>
+                            <span className={`"badge flex items-center gap-1 py-1 px-2 rounded-xl font-medium" ${isTaskExist? "bg-amber-400 text-amber-800" : "bg-green-400 text-green-700"}`}><span ><FaCircle />
+                            </span>
+                              {
+                                isTaskExist? "In Progress" : "Open"
+                              }
+                            </span>
                         </div>
                         <p className='text-[#627382] font-medium'>{ticket.description}</p>
                         <div className="card-actions flex justify-between">
