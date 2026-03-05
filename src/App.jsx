@@ -5,6 +5,7 @@ import Banner from './components/Banner/Banner'
 import Navbar from './components/Navbar/Navbar'
 import CustomerTickets from './components/CustomerTickets/CustomerTickets';
   import { ToastContainer, toast } from 'react-toastify';
+import Footer from './components/Footer/Footer';
 
 
 const fetchTickets = async () =>{
@@ -53,7 +54,7 @@ function App() {
       
       <Navbar></Navbar>
         <Banner taskList={taskList} resolvedTicket={resolvedTicket}></Banner>
-      <Suspense>
+      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
         <CustomerTickets 
         ticketsPromise={ticketsPromise}
         handleTaskList={handleTaskList}
@@ -66,7 +67,7 @@ function App() {
       </Suspense>
          <ToastContainer />
     
-     
+     <Footer></Footer>
     </>
   )
 }

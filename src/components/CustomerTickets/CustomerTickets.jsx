@@ -27,7 +27,7 @@ const CustomerTickets = ({ ticketsPromise ,handleTaskList,taskList ,handleComple
             </div>
             </div>
             <div>
-                <h1 className='text-center'>Task Status</h1>
+                <h1 className=' mt-5 md:mt-1 text-center text-2xl font-semibold text-gray-700'>Task Status</h1>
                 <div>
                        <div>
                    {
@@ -40,8 +40,8 @@ const CustomerTickets = ({ ticketsPromise ,handleTaskList,taskList ,handleComple
                    } 
                 </div>
                 </div>
-                <div> 
-                     <h1 className='text-center'>Resolved Task</h1>
+                <div className='mt-10'> 
+                     <h1 className='text-center text-xl font-semibold text-gray-700'>Resolved Task</h1>
                     <div>
                         {
                             resolvedTicket.map(ticket => <ResolvedTicket ticket={ticket}></ResolvedTicket>)

@@ -1,9 +1,8 @@
 
 
-.banner-progress
-{
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left top;
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
 }
